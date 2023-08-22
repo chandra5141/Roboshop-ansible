@@ -31,7 +31,20 @@
 
 
 
-- name: Declare a variable and access at inv level
+- name: Declare a variable and access at another file level
+  hosts: all
+  become: yes
+  vars_files:
+    - var.yml
+  tasks:
+    - name: access a variable from another level
+      ansible.builtin.debug:
+        msg: URL == {{course}}
+
+
+
+
+- name: Declare a variable and access at inv file level
   hosts: all
   become: yes
   vars_files:
