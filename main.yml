@@ -19,3 +19,12 @@
         msg: URL == {{url}}
       vars:
         url: chandupcs.com
+
+
+- name: Declare a variable and access at command level
+  hosts: all
+  become: yes
+  tasks:
+    - name: access a variable from command level
+      ansible.builtin.debug:
+        msg: URL == {{person}}
