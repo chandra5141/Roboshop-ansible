@@ -47,9 +47,7 @@
 - name: Declare a variable and access at inv file level
   hosts: all
   become: yes
-  vars_files:
-    - var.yml
   tasks:
     - name: access a variable from inv level
       ansible.builtin.debug:
-        msg: URL == {{course}}
+        msg: URL == {{duration}}
