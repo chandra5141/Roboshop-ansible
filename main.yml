@@ -5,5 +5,5 @@
     url: chandupcs.online
   tasks:
     - name: access a variable from play level
-      ansible.builtin.dedug:
+      ansible.builtin.debug:
       msg: URL == {{url}}
