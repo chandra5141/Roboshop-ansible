@@ -28,3 +28,13 @@
     - name: access a variable from command level
       ansible.builtin.debug:
         msg: URL == {{person}}
+
+
+
+- name: Declare a variable and access at inv level
+  hosts: all
+  become: yes
+  tasks:
+    - name: access a variable from inv level
+      ansible.builtin.debug:
+        msg: URL == {{course}}
