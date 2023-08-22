@@ -1,0 +1,9 @@
+- name: Declare a variable and access at play level
+  hosts: all
+  become: yes
+  vars:
+    url: chandupcs.online
+  tasks:
+    - name: access a variable from play level
+      ansible.builtin.dedug:
+      msg: URL == {{url}}
