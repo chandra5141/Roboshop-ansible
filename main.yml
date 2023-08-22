@@ -61,4 +61,4 @@
   tasks:
     - name: access special variable
       ansible.builtin.debug:
-        msg: ansible-hostname == {{ansible_fqdn}}
+        msg: ansible-hostname == {{fqdn}}
