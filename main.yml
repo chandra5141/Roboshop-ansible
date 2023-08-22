@@ -51,3 +51,14 @@
     - name: access a variable from inv level
       ansible.builtin.debug:
         msg: URL == {{duration}}
+
+
+
+- name: Declare a variable and access at special varibles
+  hosts: all
+  become: yes
+  gather_facts: yes
+  tasks:
+    - name: access special variable
+      ansible.builtin.debug:
+        msg: URL == {{fqdn}}
