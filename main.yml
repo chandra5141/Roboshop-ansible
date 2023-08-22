@@ -14,7 +14,7 @@
   hosts: all
   become: yes
   tasks:
-    - name: access a variable from play level
+    - name: access a variable from tasks level
       ansible.builtin.debug:
         msg: URL == {{url}}
       vars:
